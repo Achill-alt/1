@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - AI图像生成器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+        
+        .tech-icon {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AI</span>
+                    </div>
+                    <h1 class="text-xl font-bold gradient-text">图像生成器</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">生成器</a>
+                    <a href="gallery.html" class="text-gray-300 hover:text-white transition-colors">画廊</a>
+                    <a href="about.html" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">关于</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-20 min-h-screen">
+        <!-- Hero Section -->
+        <section class="py-16 relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">
+                        关于AI图像生成器
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        我们致力于将最先进的人工智能技术与创意艺术相结合，为每一位用户带来前所未有的视觉创作体验。
+                        无论您是专业设计师还是创意爱好者，都能在这里找到无限的创作可能。
+                    </p>
+                </div>
+                
+                <!-- Floating Elements -->
+                <div class="absolute top-20 left-10 floating-element opacity-20">🎨</div>
+                <div class="absolute top-40 right-20 floating-element opacity-20" style="animation-delay: 2s;">✨</div>
+                <div class="absolute bottom-20 left-1/4 floating-element opacity-20" style="animation-delay: 4s;">🚀</div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">核心功能特色</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        强大的AI引擎，丰富的功能集，让您的创意无限延伸
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">🎨</div>
+                        <h4 class="text-xl font-semibold mb-4">多模态生成</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            支持文本到图像、图像到图像等多种生成模式，满足不同创作需求。
+                            智能理解您的意图，生成高质量的艺术作品。
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">⚡</div>
+                        <h4 class="text-xl font-semibold mb-4">实时预览</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            生成过程中提供实时进度显示和预览效果，让您随时掌握创作状态。
+                            支持中断和重新生成，完全掌控创作流程。
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">🎭</div>
+                        <h4 class="text-xl font-semibold mb-4">丰富风格</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            内置20+种艺术风格，从写实到抽象，从古典到现代，应有尽有。
+                            每种风格都经过精心调校，确保最佳效果。
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">🎛️</div>
+                        <h4 class="text-xl font-semibold mb-4">精细控制</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            提供丰富的参数调节选项，包括分辨率、步数、CFG比例等。
+                            让您能够精确控制生成效果，实现心中所想。
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 5 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">📚</div>
+                        <h4 class="text-xl font-semibold mb-4">历史管理</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            自动保存所有生成记录，支持收藏、标签分类和批量管理。
+                            让您的创意作品得到妥善保存和整理。
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 6 -->
+                    <div class="feature-card glass-effect rounded-2xl p-8 text-center">
+                        <div class="tech-icon mx-auto">🚀</div>
+                        <h4 class="text-xl font-semibold mb-4">快速响应</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            优化的生成算法和高效的云端计算，确保快速的生成速度。
+                            平均5-10秒即可完成一幅高质量作品。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Technology Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">技术架构</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        基于最新的深度学习技术，构建稳定高效的图像生成系统
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="glass-effect rounded-2xl p-6">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <span class="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                                扩散模型 (Diffusion Models)
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                采用最先进的扩散模型技术，通过逐步去噪过程生成高质量图像。
+                                支持多种采样方法，平衡生成质量和速度。
+                            </p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <span class="w-3 h-3 bg-emerald-500 rounded-full mr-3"></span>
+                                文本编码器 (Text Encoders)
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                使用强大的文本编码器理解用户提示词，支持多语言和复杂描述。
+                                智能解析语义关系，生成符合描述的图像内容。
+                            </p>
+                        </div>
+                        
+                        <div class="glass-effect rounded-2xl p-6">
+                            <h4 class="text-lg font-semibold mb-3 flex items-center">
+                                <span class="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                                风格迁移 (Style Transfer)
+                            </h4>
+                            <p class="text-gray-400 leading-relaxed">
+                                集成多种艺术风格的深度学习模型，实现精确的风格控制。
+                                从写实到抽象，从古典到现代，应有尽有。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-6xl mb-4">🧠</div>
+                            <h4 class="text-xl font-semibold">AI工作流程</h4>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="step-number">1</div>
+                                <div class="flex-1">
+                                    <h5 class="font-medium">文本解析</h5>
+                                    <p class="text-sm text-gray-400">理解用户输入的提示词和参数</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="step-number">2</div>
+                                <div class="flex-1">
+                                    <h5 class="font-medium">特征提取</h5>
+                                    <p class="text-sm text-gray-400">提取关键特征和风格信息</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="step-number">3</div>
+                                <div class="flex-1">
+                                    <h5 class="font-medium">图像生成</h5>
+                                    <p class="text-sm text-gray-400">通过扩散模型生成基础图像</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="step-number">4</div>
+                                <div class="flex-1">
+                                    <h5 class="font-medium">细节优化</h5>
+                                    <p class="text-sm text-gray-400">应用风格和参数进行最终优化</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Usage Guide Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">使用指南</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        简单几步，轻松创建您的AI艺术作品
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="step-number mx-auto">1</div>
+                        <h4 class="text-lg font-semibold mb-3">输入提示词</h4>
+                        <p class="text-gray-400 text-sm">
+                            在文本框中详细描述您想要生成的图像内容，越具体效果越好。
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="step-number mx-auto">2</div>
+                        <h4 class="text-lg font-semibold mb-3">选择风格</h4>
+                        <p class="text-gray-400 text-sm">
+                            从20+种预设风格中选择您喜欢的艺术风格，或保持默认设置。
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="step-number mx-auto">3</div>
+                        <h4 class="text-lg font-semibold mb-3">调整参数</h4>
+                        <p class="text-gray-400 text-sm">
+                            根据需要调整分辨率、生成步数等参数，获得理想的生成效果。
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="step-number mx-auto">4</div>
+                        <h4 class="text-lg font-semibold mb-3">生成下载</h4>
+                        <p class="text-gray-400 text-sm">
+                            点击生成按钮，等待AI创作完成，然后下载您的专属艺术作品。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">常见问题</h3>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        解答您在使用过程中可能遇到的疑问
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="glass-effect rounded-2xl p-6">
+                        <h4 class="text-lg font-semibold mb-3">生成的图像可以用于商业用途吗？</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            是的，您使用本工具生成的图像拥有完全的使用权，包括商业用途。
+                            但请注意不要生成违反法律法规或侵犯他人权益的内容。
+                        </p>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-6">
+                        <h4 class="text-lg font-semibold mb-3">生成图像的质量如何保证？</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            我们使用最先进的AI模型和优化的算法，确保生成高质量的图像。
+                            您可以通过调整参数和使用更详细的提示词来进一步提升质量。
+                        </p>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-6">
+                        <h4 class="text-lg font-semibold mb-3">生成速度如何？</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            平均生成时间为5-10秒，具体取决于您选择的分辨率和生成步数。
+                            我们持续优化算法以提供更快的生成速度。
+                        </p>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-6">
+                        <h4 class="text-lg font-semibold mb-3">如何写出好的提示词？</h4>
+                        <p class="text-gray-400 leading-relaxed">
+                            建议使用具体、详细的描述，包括主题、风格、色彩、构图等元素。
+                            可以参考我们的模板和示例，逐步掌握提示词的编写技巧。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="glass-effect rounded-2xl p-12 text-center">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">开始您的创作之旅</h3>
+                    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+                        立即体验AI图像生成的魅力，释放您的创意潜能。
+                        无论是艺术创作、设计灵感还是娱乐消遣，我们都能满足您的需求。
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="index.html" class="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            开始生成
+                        </a>
+                        <a href="gallery.html" class="glass-effect hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
+                            查看画廊
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="py-8 mt-16 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm">
+                © 2025 AI图像生成器. 基于先进的深度学习技术，为您提供卓越的创意体验.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // 页面动画
+        document.addEventListener('DOMContentLoaded', () => {
+            // 页面入场动画
+            anime({
+                targets: '.glass-effect',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 800,
+                delay: anime.stagger(100),
+                easing: 'easeOutExpo'
+            });
+            
+            // 特色卡片悬停动画
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    anime({
+                        targets: card,
+                        scale: 1.02,
+                        duration: 200,
+                        easing: 'easeOutQuad'
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    anime({
+                        targets: card,
+                        scale: 1,
+                        duration: 200,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
